@@ -1,58 +1,61 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# DB_PEMESANAN_TIKET
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Tahapan Pertama: Persiapan Projek
 
-## About Laravel
+1. Membuat folder projek dengan nama `db_pemesanan_ticket`.
+2. Membuat dan menyesuaikan struktur MVC (*Model, View, Controller*) pada Laravel.
+3. Membuat database untuk aplikasi pemesanan tiket.
+4. Membuat model, view, dan controller sesuai kebutuhan aplikasi.
+5. Menyiapkan konfigurasi awal projek Laravel.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tahapan Kedua: Konfigurasi Database
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. Mengonfigurasi koneksi database pada file `.env`.
+2. Menyesuaikan nama database dengan database yang telah dibuat.
+3. Mengubah konfigurasi database menjadi MySQL.
+4. Memastikan username dan password database sudah benar.
+5. Menjalankan perintah `php artisan migrate` untuk membuat tabel bawaan Laravel.
+6. Memastikan koneksi database berhasil dan tabel berhasil dibuat.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Tahapan Ketiga: Pembuatan Struktur Database
 
-## Learning Laravel
+1. Membuat dan mengisi file migration untuk tabel `orders`.
+2. Membuat dan mengisi file migration untuk tabel `events`.
+3. Membuat dan mengisi file migration untuk tabel `order_details`.
+4. Menentukan kolom, tipe data, primary key, dan foreign key pada setiap tabel.
+5. Menjalankan migration untuk membuat ketiga tabel di database.
+6. Memeriksa struktur tabel melalui phpMyAdmin atau MySQL.
+7. Membuat relasi antartabel sesuai kebutuhan sistem pemesanan tiket.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Tahapan Keempat: Pembuatan Model dan Relasi
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Membuat model `Order`, `Event`, dan `OrderDetail`.
+2. Mengatur properti `$fillable` pada setiap model.
+3. Membuat relasi antarmodel menggunakan `Hasy()`, `belongsTo()`, atau relasi lain yang sesuai.
+4. Menguji relasi model dengan database.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## Tahapan Kelima: Pembuatan Controller dan Halaman
 
-## Agentic Development
+1. Membuat `OrderController`, `EventsController`, dan `OrderDetailController`.
+2. Membuat fungsi menampilkan data, menambah data, mengubah data, dan menghapus data (CRUD).
+3. Membuat halaman Blade untuk menampilkan data pemesanan tiket.
+4. Membuat formulir untuk menambahkan dan mengubah data.
+5. Mengatur route pada file `routes/web.php`.
+6. Menghubungkan halaman View dengan Controller dan Model.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## Tahapan Keenam: Pengujian Aplikasi
 
-```bash
-composer require laravel/boost --dev
+1. Menjalankan aplikasi menggunakan `php artisan serve`.
+2. Menguji proses tambah, tampil, ubah, dan hapus data.
+3. Memastikan data berhasil disimpan ke database MySQL.
+4. Menguji relasi antara pesanan, acara, dan detail pesanan.
+5. Memperbaiki error yang ditemukan selama pengujian.
 
-php artisan boost:install
-```
+## Tahapan Ketujuh: Upload Projek ke GitHub
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Memeriksa perubahan file menggunakan `git status`.
+2. Menambahkan file yang akan diunggah menggunakan `git add .`.
+3. Membuat commit menggunakan `git commit -m "Menyelesaikan database pemesanan tiket"`.
+4. Mengambil perubahan terbaru dari GitHub menggunakan `git pull origin main`.
+5. Mengirim perubahan ke GitHub menggunakan `git push -u origin main`.
+6. Memastikan seluruh perubahan projek sudah tersimpan di repositori GitHub.
