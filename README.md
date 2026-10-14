@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DB_PEMESANAN_TIKET
 
 ## Tahapan Pertama: Persiapan Projek
@@ -59,3 +60,7 @@
 4. Mengambil perubahan terbaru dari GitHub menggunakan `git pull origin main`.
 5. Mengirim perubahan ke GitHub menggunakan `git push -u origin main`.
 6. Memastikan seluruh perubahan projek sudah tersimpan di repositori GitHub.
+=======
+# mesen_ticket
+web
+>>>>>>> 6ca4bb2060dd76a4935db44ae59f4dbacdd96c5c
