@@ -29,18 +29,21 @@ class DatabaseSeeder extends Seeder
                 'category' => 'musik',
                 'ticket_price' => 150000,
                 'description' => 'Konser musik dengan musisi tanah air.',
+                'image' => 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800',
             ],
             [
                 'title' => 'Festival Budaya',
                 'category' => 'festival',
                 'ticket_price' => 75000,
                 'description' => 'Festival budaya dan kuliner nusantara.',
+                'image' => 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800',
             ],
             [
                 'title' => 'Seminar Teknologi',
                 'category' => 'seminar',
                 'ticket_price' => 100000,
                 'description' => 'Seminar teknologi terkini bersama praktisi.',
+                'image' => 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800',
             ],
         ];
 

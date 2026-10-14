@@ -58,7 +58,6 @@
                         </td>
                         <td>
                             <div class="actions">
-                                <a href="{{ route('events.show', $event->id) }}" class="btn btn-secondary">Lihat</a>
                                 <a href="{{ route('events.edit', $event->id) }}" class="btn btn-secondary">Edit</a>
                                 <form action="{{ route('events.destroy', $event->id) }}" method="POST" onsubmit="return confirm('Yakin hapus data ini?')">
                                     @csrf

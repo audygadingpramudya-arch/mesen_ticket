@@ -9,8 +9,8 @@
 <body class="bg-gray-100 p-6 font-sans">
     <div class="max-w-5xl mx-auto">
         <div class="text-center mb-6">
-            <h1 class="text-3xl font-bold text-gray-800">Menu Restoran</h1>
-            <p class="text-gray-500 text-sm mt-1">Pilih menu makanan dan masukkan nomor meja Anda</p>
+            <h1 class="text-3xl font-bold text-gray-800">Menu Ticket</h1>
+            <p class="text-gray-500 text-sm mt-1">Pilih menu ticket dan masukkan nomor meja Anda</p>
         </div>
 
         <!-- NOTIFIKASI SUCCESS / ERROR / VALIDASI -->
@@ -35,9 +35,9 @@
         <!-- FILTER KATEGORI (JAVASCRIPT) -->
         <div class="flex flex-wrap justify-center gap-3 mb-8">
             <button type="button" onclick="filterCategory('all', this)" class="btn-category px-5 py-2 rounded-full font-semibold text-sm transition bg-blue-600 text-white shadow-md">Semua Menu</button>
-            <button type="button" onclick="filterCategory('Makanan', this)" class="btn-category px-5 py-2 rounded-full font-semibold text-sm transition bg-white text-gray-600 hover:bg-gray-200 border">Makanan</button>
-            <button type="button" onclick="filterCategory('Minuman', this)" class="btn-category px-5 py-2 rounded-full font-semibold text-sm transition bg-white text-gray-600 hover:bg-gray-200 border">Minuman</button>
-            <button type="button" onclick="filterCategory('Cemilan', this)" class="btn-category px-5 py-2 rounded-full font-semibold text-sm transition bg-white text-gray-600 hover:bg-gray-200 border">Cemilan</button>
+            <button type="button" onclick="filterCategory('Musik', this)" class="btn-category px-5 py-2 rounded-full font-semibold text-sm transition bg-white text-gray-600 hover:bg-gray-200 border">Musik</button>
+            <button type="button" onclick="filterCategory('Festival', this)" class="btn-category px-5 py-2 rounded-full font-semibold text-sm transition bg-white text-gray-600 hover:bg-gray-200 border">Festival</button>
+            <button type="button" onclick="filterCategory('Seminar', this)" class="btn-category px-5 py-2 rounded-full font-semibold text-sm transition bg-white text-gray-600 hover:bg-gray-200 border">Seminar</button>
         </div>
 
         <form id="orderForm" action="{{ route('customer.checkout') }}" method="POST">

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class EventsController extends Controller
 {
+    // Logika Crud Events 
     public function index()
     {
         $events = Events::latest()->paginate(10);
@@ -15,11 +16,13 @@ class EventsController extends Controller
         return view('events.index', compact('events'));
     }
 
+    // Menambahkan Data Fungsi Untuk Memesan
     public function create()
     {
         return view('events.create');
     }
 
+    // Menyimpan Data
     public function store(Request $request)
     {
         $data = $request->validate([
@@ -37,6 +40,7 @@ class EventsController extends Controller
             ->with('success', 'Data berhasil ditambahkan.');
     }
 
+    // Menuliskan Setiap file events
     public function show(Events $event)
     {
         return view('events.show', compact('event'));
@@ -47,6 +51,7 @@ class EventsController extends Controller
         return view('events.edit', compact('event'));
     }
 
+    // Mengubah Data lama menjadi baru
     public function update(Request $request, Events $event)
     {
         $data = $request->validate([
@@ -64,6 +69,7 @@ class EventsController extends Controller
             ->with('success', 'Data berhasil diperbarui.');
     }
 
+    // Menghapus Data 
     public function destroy(Events $event)
     {
         $event->delete();

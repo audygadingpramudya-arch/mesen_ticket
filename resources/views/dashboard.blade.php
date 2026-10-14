@@ -18,27 +18,7 @@
                 </div>
             @endif
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
-                <div class="bg-white shadow-sm sm:rounded-lg p-4">
-                    <div class="text-sm text-gray-500">Total Pesanan</div>
-                    <div class="text-2xl font-bold text-gray-900">{{ $summary['total'] }}</div>
-                </div>
-                <div class="bg-white shadow-sm sm:rounded-lg p-4">
-                    <div class="text-sm text-gray-500">Pending</div>
-                    <div class="text-2xl font-bold text-yellow-600">{{ $summary['pending'] }}</div>
-                </div>
-                <div class="bg-white shadow-sm sm:rounded-lg p-4">
-                    <div class="text-sm text-gray-500">Confirmed</div>
-                    <div class="text-2xl font-bold text-green-600">{{ $summary['confirmed'] }}</div>
-                </div>
-                <div class="bg-white shadow-sm sm:rounded-lg p-4">
-                    <div class="text-sm text-gray-500">Cancelled</div>
-                    <div class="text-2xl font-bold text-red-600">{{ $summary['cancelled'] }}</div>
-                </div>
-                <div class="bg-white shadow-sm sm:rounded-lg p-4">
-                    <div class="text-sm text-gray-500">Pendapatan</div>
-                    <div class="text-lg font-bold text-gray-900">Rp {{ number_format($summary['revenue'], 0, ',', '.') }}</div>
-                </div>
+           
             </div>
 
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
